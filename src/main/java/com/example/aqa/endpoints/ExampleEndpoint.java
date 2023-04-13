@@ -16,7 +16,7 @@ public class ExampleEndpoint {
     static String lastStr;
 
     @GetMapping(path = "/getString")
-    public String getString(@RequestParam(defaultValue = "null") String str) {
+    public String getStringWithoutSpaces(@RequestParam(defaultValue = "empty string") String str) {
         lastStr = str;
         return str.trim();
     }
